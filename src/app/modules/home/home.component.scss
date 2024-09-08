@@ -1,0 +1,283 @@
+.banner {
+    background-image: url('/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.banner-content,
+.content {
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+
+    a {
+        font-size: 1.1em;
+        padding: 10px 20px;
+    }
+}
+
+.content {
+    text-align: center;
+    padding-top: 1.5rem;
+
+}
+
+@media (max-width: 600px) {
+    .banner {
+        height: 300px;
+    }
+
+    .banner-content,
+    .content {
+        h1 {
+            font-size: 1.8em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        a {
+            font-size: 1em;
+        }
+    }
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+
+}
+
+@media (min-width: 981px) {
+    .card-container {
+        padding: 4% 0;
+    }
+}
+
+.custom-card {
+    max-width: 350px;
+    width: 100%;
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.user-icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #0f05a0; // Color azul de Angular Material
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; // Para que el círculo quede parcialmente fuera de la tarjeta
+    border: 4px solid white; // Borde blanco alrededor del círculo
+}
+
+.user-icon-circle fa-icon {
+    font-size: 40px;
+    color: white;
+}
+
+mat-card {
+    mix-blend-mode: unset !important;
+
+    border: 0 solid red;
+
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+
+    transform: translate(-5px, -5px);
+
+    background-color: #FFFFFF;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+    border-color: #003869;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 0px 2px 18px 0px rgba(35, 0, 102, 0.09);
+    transition: transform 300ms ease 0ms;
+    transition: all 300ms;
+}
+
+mat-card:hover {
+    transform: scaleX(1.05) scaleY(1.05) !important;
+    box-shadow: 10px 10px 0px 0px #003869, 20px 20px #0088ff, 30px 30px 14px #b9d9f5;
+    transform: translate(-5px, -5px);
+}
+
+mat-card-content {
+    text-align: center;
+}
+
+// Media query para dispositivos móviles
+@media (max-width: 600px) {
+    .user-card {
+        max-width: 100%;
+    }
+}
+
+.contact-container {
+    width: 80%;
+    max-width: 1080px;
+    margin: auto;
+    position: relative;
+    box-shadow: 6px 6px 18px 0px rgba(0, 0, 0, 0.3);
+    padding: 5vh;
+    margin-bottom: 100px;
+}
+
+@media only screen and (min-width: 981px) {
+    .contact-container {
+        max-width: 50%;
+    }
+}
+
+.field {
+    padding: 0 0 0 3%;
+    margin-bottom: 3%;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.input {
+    background-color: #eee;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    color: #999;
+    font-size: 14px;
+    padding: 16px;
+    font-family: Open Sans, Arial, sans-serif;
+}
+
+.et_pb_contact_submit {
+    color: #2ea3f2;
+}
+
+.et_pb_contact_reset,
+.et_pb_contact_submit {
+    font-family: inherit;
+    display: inline-block;
+    margin: 0 0 0 18px;
+    cursor: pointer;
+}
+
+.et_pb_button::after {
+    font-size: 32px;
+    line-height: 1em;
+    content: "\203a";
+    opacity: 0;
+    position: absolute;
+    margin-left: -1em;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    text-transform: none;
+    -webkit-font-feature-settings: "kern" off;
+    font-feature-settings: "kern" off;
+    font-variant: none;
+    font-style: normal;
+    font-weight: 400;
+    text-shadow: none;
+}
+
+.et_pb_button::after,
+.et_pb_contact_submit::after {
+    font-style: normal;
+    font-weight: 400;
+    -webkit-font-feature-settings: normal;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0 0;
+    direction: ltr;
+}
+
+.et_pb_button:hover,
+.et_pb_module .et_pb_button:hover {
+    border: 2px solid transparent;
+    padding: .3em 2em .3em .7em;
+}
+
+.et_pb_contact_submit:hover {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.et_pb_contact_reset,
+.et_pb_contact_submit {
+    font-family: inherit;
+    display: inline-block;
+    margin: 0 0 0 18px;
+    cursor: pointer;
+}
+
+.et_pb_button {
+    font-size: 20px;
+    font-weight: 500;
+    padding: .3em 1em;
+    line-height: 1.7em !important;
+    background-color: transparent;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border: 2px solid;
+    border-radius: 3px;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-property: all !important;
+    transition-property: all !important;
+}
+
+.et_pb_button:hover:after {
+    opacity: 1;
+    margin-left: .2em;
+}
+
+.item-list {
+    transition: transform 300ms ease 0ms;
+    animation-duration: 2s;
+    margin-top: .5rem;
+}
+
+.item-list:hover {
+    transform: translateX(10px) translateY(0px) !important;
+}

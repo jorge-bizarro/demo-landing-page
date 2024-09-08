@@ -1,0 +1,38 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+mat-sidenav-container {
+    height: calc(100vh - 64px);
+}
+
+mat-sidenav {
+    width: 200px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    padding: 0 var(--mat-text-button-horizontal-padding, 8px);
+}
+
+.social-icon {
+    color: #0c047d;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: black; // Color amarillo de Angular Material
+    }
+}
+
+.logo {
+    height: 80%; // Ajusta este valor según necesites
+    width: auto;
+    max-height: 64px; // Altura estándar del mat-toolbar
+    margin-right: 16px; // Espacio entre el logo y el siguiente elemento
+}
+
+mat-toolbar {
+    display: flex;
+    align-items: center;
+}
